@@ -5,12 +5,12 @@ import { useNavigate } from 'react-router-dom';
 import { useContext, useState } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 import { HiEye, HiEyeOff } from "react-icons/hi";
-
+import bglogin from "../../assets/img2.1-8969de38.jpg"
 // ...
 
 const SignUp = () => {
 
-  const [showPassword, setShowPassword] = useState(false);
+  //const [showPassword, setShowPassword] = useState(false);
   const { register, handleSubmit, reset, formState: { errors }, watch } = useForm();
   const { createUser, updateUserProfile } = useContext(AuthContext);
 
@@ -43,7 +43,7 @@ const SignUp = () => {
       .catch(error => console.log(error));
     }
   return (
-    <div className="login font-serif container w-full py-10">
+    <div style={{backgroundImage:`url(${bglogin})`}} className="login font-serif container w-full py-10">
       <form onSubmit={handleSubmit(onSubmit)} className='mx-auto max-w-[500px] bg-[#f4f1f1d6] rounded-lg shadow-md py-5 px-10'>
         <h2 className="text-2xl font-bold mb-4 text-center">Registration Page</h2>
         <div className="mb-4">
@@ -76,7 +76,7 @@ const SignUp = () => {
           </label>
           <div className="relative">
             <input
-              type={showPassword ? "text" : "password"}
+              type="password"
               id="password"
               {...register("password", {
                 required: true,
@@ -87,9 +87,9 @@ const SignUp = () => {
             />
             <div
               className="absolute top-1/2 right-2 transform -translate-y-1/2 cursor-pointer"
-              onClick={() => setShowPassword(!showPassword)}
+              // onClick={() => setShowPassword(!showPassword)}
             >
-              {showPassword ? <HiEyeOff size={20} /> : <HiEye size={20} />}
+              {/* {showPassword ? <HiEyeOff size={20} /> : <HiEye size={20} />} */}
               {errors.password?.type === 'required' && (
                 <span className="text-red-500">Password is required</span>
               )}
@@ -114,7 +114,7 @@ const SignUp = () => {
           <div className="relative">
             <input
               className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
-              type={showPassword ? "text" : "password"}
+              type="password"
               {...register("confirmPassword", {
                 required: true,
                 validate: (value) => value === watch("password")
@@ -122,9 +122,9 @@ const SignUp = () => {
             />
             <div
               className="absolute top-1/2 right-2 transform -translate-y-1/2 cursor-pointer"
-              onClick={() => setShowPassword(!showPassword)}
+              // onClick={() => setShowPassword(!showPassword)}
             >
-              {showPassword ? <HiEyeOff size={20} /> : <HiEye size={20} />}
+              {/* {showPassword ? <HiEyeOff size={20} /> : <HiEye size={20} />} */}
             </div>
             {errors.confirmPassword && errors.confirmPassword.type === "required" && (
               <p className="text-red-500">Confirm Password is required.</p>

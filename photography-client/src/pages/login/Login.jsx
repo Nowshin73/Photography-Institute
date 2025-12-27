@@ -5,11 +5,11 @@ import axios from 'axios';
 import { AuthContext } from '../../providers/AuthProvider';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
-
+import bglogin from "../../assets/img2.1-8969de38.jpg"
 const Login = () => {
   const { register, handleSubmit, reset, formState: { errors } } = useForm();
   const [errorMessage, setErrorMessage] = useState('');
-  const [showPassword, setShowPassword] = useState(false);
+  // const [showPassword, setShowPassword] = useState(false);
   const { signIn, googleSignIn } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
@@ -70,7 +70,7 @@ const Login = () => {
   };
 
   return (
-    <div className="login font-serif min-h-screen flex items-center justify-center bg-gray-100">
+    <div style={{backgroundImage:`url(${bglogin})`}} className="login font-serif min-h-screen flex items-center justify-center bg-gray-100">
       <div className="max-w-md w-full mx-auto bg-[#f4f1f1d6] rounded-lg shadow-md py-5 px-10">
         <h1 className="text-2xl font-semibold mb-6">Login</h1>
         {errorMessage && <p className="text-red-500 mb-4">{errorMessage}</p>}
@@ -92,16 +92,16 @@ const Login = () => {
             </label>
             <div className="relative">
               <input
-                type={showPassword ? "text" : "password"}
+                type="password"
                 id="password"
                 {...register("password", { required: true })}
                 className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
               />
               <div
                 className="absolute top-1/2 right-2 transform -translate-y-1/2 cursor-pointer"
-                onClick={() => setShowPassword(!showPassword)}
+                // onClick={() => setShowPassword(!showPassword)}
               >
-                {showPassword ? <HiEyeOff size={20} /> : <HiEye size={20} />}
+                {/* {showPassword ? <HiEyeOff size={20} /> : <HiEye size={20} />} */}
               </div>
             </div>
             {errors.password && (

@@ -5,6 +5,7 @@ import Main from '../layout/Main'
 import { createBrowserRouter } from 'react-router-dom'
 import Login from '../pages/login/Login'
 import Home from '../pages/home/Home'
+import Instructors from '../pages/instructors/Instructors'
 
 
 export const router = createBrowserRouter([
@@ -23,6 +24,10 @@ export const router = createBrowserRouter([
         {
             path: '/signup',
             element: <SignUp></SignUp>
+        },
+        {
+            path: '/instructors',
+            element: <Instructors></Instructors>
         },
         // {
         //     path: '/colleges',

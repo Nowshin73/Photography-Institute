@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@plugin "daisyui";
 .button-primary {
     font-size: 15px;
     border: 1px solid black;
@@ -36,3 +37,10 @@
     color: #fff;
     background: rgba(0,0,0,.81)
 }
+.classimg:hover {
+    transform: scale(2)
+}
+.classimg:hover{
+    transition: 2.5s ease-in-out
+}
+

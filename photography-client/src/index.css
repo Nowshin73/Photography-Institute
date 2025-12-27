@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.button-primary {
+    font-size: 15px;
+    border: 1px solid black;
+    font-weight: 500;
+    padding: 5px 10px;
+    height: -moz-max-content;
+    height: max-content;
+    width: -moz-max-content;
+    width: max-content;
+    color: #fff;
+    background: rgba(0,0,0,.81)
+}
+
+.button-primary:hover {
+    background-color: #fff;
+    border: 1px solid black;
+    color: #000
+}
+
+.button-secondary {
+    font-size: 15px;
+    font-weight: 400;
+    padding: 5px 10px;
+    width: max-content;
+    height: max-content;
+    min-width: 250px;
+    background-color: #fff;
+    border: 1px solid black;
+    color: #000
+}
+
+.button-secondary:hover {
+    color: #fff;
+    background: rgba(0,0,0,.81)
+}

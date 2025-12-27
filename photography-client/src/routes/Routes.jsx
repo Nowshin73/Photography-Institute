@@ -4,6 +4,7 @@ import SignUp from '../pages/login/SignUp'
 import Main from '../layout/Main'
 import { createBrowserRouter } from 'react-router-dom'
 import Login from '../pages/login/Login'
+import Home from '../pages/home/Home'
 
 
 export const router = createBrowserRouter([

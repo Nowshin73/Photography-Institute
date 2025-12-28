@@ -10,7 +10,7 @@ const NavBar = () => {
 
         {/* Brand */}
         <div className="brandname">
-          <span>Photography Institute</span>
+          <span className="brand-text text-gray-500">Photography Institute</span>
         </div>
 
         {/* Navigation */}

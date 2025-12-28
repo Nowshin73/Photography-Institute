@@ -6,6 +6,7 @@ import { createBrowserRouter } from 'react-router-dom'
 import Login from '../pages/login/Login'
 import Home from '../pages/home/Home'
 import Instructors from '../pages/instructors/Instructors'
+import Classes from '../pages/classes/Classes'
 
 
 export const router = createBrowserRouter([
@@ -28,6 +29,10 @@ export const router = createBrowserRouter([
         {
             path: '/instructors',
             element: <Instructors></Instructors>
+        },
+        {
+            path: '/classes',
+            element: <Classes></Classes>
         },
         // {
         //     path: '/colleges',

@@ -166,7 +166,7 @@ const classesData = [
 const Classes = () => {
   return (
     <div className="bg-gray-100 p-6">
-      <h1 className="text-2xl font-semibold mb-6">Classes</h1>
+      <h1 className="text-2xl text-black font-semibold mb-6">Classes</h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {classesData.map((item) => (
@@ -182,7 +182,7 @@ const Classes = () => {
               className="w-full h-48 rounded mb-4 object-cover"
             />
 
-            <h2 className="text-lg font-semibold mb-1">{item.name}</h2>
+            <h2 className="text-lg text-black font-semibold mb-1">{item.name}</h2>
             <p className="text-gray-500 mb-1">{item.instructor}</p>
             <p className="text-gray-500 mb-1">
               Available Seats: {item.seats}

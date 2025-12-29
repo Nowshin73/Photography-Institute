@@ -11,7 +11,7 @@ const InstructorCard = ({ instructor }) => {
         className="w-32 h-32 rounded-full object-cover mb-4"
       />
 
-      <h2 className="text-lg font-semibold mb-1">{name}</h2>
+      <h2 className="text-lg text-black font-semibold mb-1">{name}</h2>
       <p className="text-gray-500 text-sm mb-3">{email}</p>
 
       <div className="mb-4 w-full">
